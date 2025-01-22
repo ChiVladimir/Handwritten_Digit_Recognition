@@ -4,6 +4,7 @@ import tkinter as tk
 #import win32gui
 from PIL import ImageGrab, Image
 import numpy as np
+import load_data
 
 model = load_model('mnist.h5')
 
@@ -65,5 +66,6 @@ class App(tk.Tk):
         self.canvas.create_oval(self.x - r, self.y - r, self.x + r, self.y + r, fill='black')
 
 
+load_data()
 app = App()
 mainloop()
